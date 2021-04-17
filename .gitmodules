@@ -1,0 +1,3 @@
+[submodule "ekf_nav_ins"]
+	path = ekf_nav_ins
+	url = https://github.com/balamuruganky/ekf_nav_ins
