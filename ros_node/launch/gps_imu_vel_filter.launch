@@ -1,0 +1,26 @@
+<launch>
+    <param name="accl_noise"        type="double" value="0.05" />
+    <param name="gyro_noise"        type="double" value="0.00175" />
+    <param name="accl_bias_noise"   type="double" value="0.01" />
+    <param name="gyro_bias_noise"   type="double" value="0.00025" />
+
+    <param name="sigma_gps_pos_ne"  type="double" value="3.0" />
+    <param name="sigma_gps_pos_d"   type="double" value="6.0" />
+    <param name="sigma_gps_vel_ne"  type="double" value="0.5" />
+    <param name="sigma_gps_vel_d"   type="double" value="1.0" />
+
+    <param name="vel_tf_enu_to_ned" type="boolean" value="false" />
+    <param name="imu_tf_enu_to_ned" type="boolean" value="false" />
+
+    <param name="gps_fix_topic"     type="string" value="/gps/fix" />
+    <param name="gps_vel_topic"     type="string" value="/gps/fix_velocity" />
+    <param name="imu_topic"         type="string" value="/vectornav/IMU" />
+    <param name="mag_topic"         type="string" value="/vectornav/Mag" />
+
+    <param name="gps_publish_rate"  type="int" value="10" />
+    <param name="imu_publish_rate"  type="int" value="40" />
+    <param name="mag_publish_rate"  type="int" value="40" />
+
+    <node name="gps_imu_vel_filter_node" pkg="gps_imu_vel_filter" type="gps_imu_vel_filter_node" output="screen" />
+
+</launch>
